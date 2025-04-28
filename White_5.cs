@@ -161,7 +161,7 @@ namespace Lab_7
                 }
             }
 
-            public override void Print()
+            public new void Print()
             {
                 base.Print();
                 Console.WriteLine($"Штрафы: {TotalPenalties}");

@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Linq;
+
 namespace Lab_7
 {
     public class White_4
     {
         public class Human
         {
-            protected string _name;
-            protected string _surname;
+            private string _name;
+            private string _surname;
 
-            public string Name => _name;
             public string Surname => _surname;
+            public string Name => _name;
 
             public Human(string name, string surname)
             {
@@ -18,7 +19,7 @@ namespace Lab_7
                 _surname = surname;
             }
 
-            public virtual void Print()
+            public void Print()
             {
                 Console.WriteLine($"Имя: {_name}, Фамилия: {_surname}");
             }
@@ -83,9 +84,10 @@ namespace Lab_7
                 }
             }
 
-            public override void Print()
+            public new void Print()
             {
-                Console.WriteLine($"Имя: {_name}, Фамилия: {_surname}, Общий результат: {TotalScore}");
+                base.Print();
+                Console.WriteLine($"Общий результат: {TotalScore}");
             }
         }
     }
