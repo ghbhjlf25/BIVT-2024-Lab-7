@@ -74,7 +74,7 @@ namespace Lab_7
                 _matches = new Match[0];
             }
 
-            public virtual void PlayMatch(int goals, int misses)
+            public void PlayMatch(int goals, int misses)
             {
                 if (_matches == null) return;
                 Match[] newMatches = new Match[_matches.Length + 1];
@@ -144,7 +144,7 @@ namespace Lab_7
                 _penalties = new int[0];
             }
 
-            public override void PlayMatch(int goals, int misses)
+            public new void PlayMatch(int goals, int misses)
             {
                 base.PlayMatch(goals, misses);
                 
